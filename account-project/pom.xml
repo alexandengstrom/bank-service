@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>tdp024</groupId>
+    <artifactId>account</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+      <module>account-datalayer</module>
+      <module>account-logic</module>
+      <module>account-rest</module>
+     <module>account-xfinal-test</module>
+ </modules>
+
+     <build>
+        <plugins>
+                <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.9</version> <!-- Update to the latest version -->
+                <executions>
+                    <!-- Add jacoco agent to JVM arguments to collect coverage -->
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <!-- Generate the report after tests have run -->
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase> <!-- Run this during the test phase -->
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
+</project>

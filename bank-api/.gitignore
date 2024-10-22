@@ -1,0 +1,22 @@
+# Compiled binary
+target/*
+
+# Rust dependencies
+Cargo.lock
+
+# IDE and editor files
+*.rs.bk
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+*.swp
+*~
+
+# Backup files
+*.bak
+*.tmp
+
+# Other system files
+.DS_Store
+Thumbs.db
